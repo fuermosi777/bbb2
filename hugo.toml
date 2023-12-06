@@ -1,0 +1,6 @@
+baseURL = 'https://b.liuhao.im/'
+languageCode = 'zh-cn'
+title = 'Hao'
+
+[frontmatter]
+date  = [":filename", ":default"]
