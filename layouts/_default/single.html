@@ -1,7 +1,30 @@
 {{ define "page" }}
-<article class="container">
-  <a href="{{ .CurrentSection.RelPermalink }}">Back to {{ .CurrentSection.Title }}</a>
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-</article>
+<div class="post">
+  <div class="title">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </div>
+  <div class="meta">{{ time.Format "2006.01.02" .Date }}</div>
+
+  <article>
+    {{ if not .Params.hidden }}
+    {{ .Content }}
+    {{ end }}
+  </article>
+
+  <div class="end">
+  {{ with .PrevInSection }}
+  <div class="next">
+    <div class="tag">🌗 旧篇</div>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </div>
+  {{ end }}
+
+  {{ with .NextInSection }}
+  <div class="next">
+    <div class="tag">新篇 🌓</div>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </div>
+  {{ end }}
+  </div>
+</div>
 {{ end }}

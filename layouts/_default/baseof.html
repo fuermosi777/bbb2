@@ -50,7 +50,9 @@
     </div>
   </div>
   <div class="content">
+    {{ block "home" . }}{{ end }}
     {{ block "page" . }}{{ end }}
+    {{ block "archive" . }}{{ end }}
   </div>
 </body>
 
