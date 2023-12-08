@@ -184,6 +184,16 @@ body {
   }
 }
 
+.title-item-year-menu {
+  padding: 15px;
+  font-size: 16px;
+  background-color: $hover-bg-color;
+  border-radius: 6px;
+  a {
+    color: $sub-text-color;
+  }
+}
+
 .title-item-year {
   font-size: 18px;
   color: $sub-text-color;
