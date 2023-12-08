@@ -9,7 +9,7 @@
   <meta name="google-site-verification" content="swC0dIMoYNPxKp6izWvKmEPF3KV72sYczXF0jaYf2mQ" />
 
   <meta name="description" content="A blog" />
-  <title>{{ or .Title .Site.Title }}{{ if ne .Kind "home" }} | {{ .CurrentSection.Title }}{{ end }}</title>
+  <title>{{ or .Title .Site.Title }}</title>
   {{ $style := resources.Get "scss/style.scss" | toCSS | minify }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
