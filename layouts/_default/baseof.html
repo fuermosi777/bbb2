@@ -6,55 +6,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <meta name="google-site-verification" content="swC0dIMoYNPxKp6izWvKmEPF3KV72sYczXF0jaYf2mQ" />
 
   <meta name="description" content="A blog" />
   <title>{{ or .Title .Site.Title }}</title>
   {{ $style := resources.Get "scss/style.scss" | toCSS | minify }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
-  <!-- Hotjar Tracking Code for blog.liuhao.im -->
-  <script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:2621735,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
 
-<!-- Default Statcounter code for blog https://b.liuhao.im
+  <!-- Default Statcounter code for blog https://b.liuhao.im
 -->
-<script type="text/javascript">
-  var sc_project=10483303; 
-  var sc_invisible=1; 
-  var sc_security="aa145d22"; 
+  <script type="text/javascript">
+    var sc_project = 10483303;
+    var sc_invisible = 1;
+    var sc_security = "aa145d22"; 
   </script>
-  <script type="text/javascript"
-  src="https://www.statcounter.com/counter/counter.js"
-  async></script>
-  <noscript><div class="statcounter"><a title="hit counter"
-  href="https://statcounter.com/" target="_blank"><img
-  class="statcounter"
-  src="https://c.statcounter.com/10483303/0/aa145d22/1/"
-  alt="hit counter"
-  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="hit counter" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/10483303/0/aa145d22/1/" alt="hit counter"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
   <!-- End of Statcounter Code -->
 </head>
 
 <body>
   <div class="menu-bar">
     <div class="leading">
-        <a href="{{ .Site.Home.RelPermalink }}" class="logo">
-            <img src="/watercolor_logo.png"/>
-        </a>
+      <a href="{{ .Site.Home.RelPermalink }}" class="logo">
+        <img src="/watercolor_logo.png" />
+      </a>
     </div>
     <div class="trailing">
-        <a href="/">首页</a>
-        <a href="/archive">归档</a>
-        <a href="https://memos.fuermosi777.synology.me/u/fuermosi777">memos</a>
+      <a href="/">首页</a>
+      <a href="/archive">归档</a>
+      <a href="https://memos.fuermosi777.synology.me/u/fuermosi777">memos</a>
     </div>
   </div>
   <div class="content">
@@ -62,7 +47,7 @@
     {{ block "page" . }}{{ end }}
     {{ block "archive" . }}{{ end }}
   </div>
-  
+
 </body>
 
 </html>
