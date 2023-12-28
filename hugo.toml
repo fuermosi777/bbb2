@@ -6,4 +6,8 @@ hasCJKLanguage = true
 date_format = "2006.02.01"
 
 [frontmatter]
-date  = [":filename", ":default"]
+date = [":filename", ":default"]
+
+[services]
+[services.disqus]
+shortname = 'blog-ctpDc1LkF8'
